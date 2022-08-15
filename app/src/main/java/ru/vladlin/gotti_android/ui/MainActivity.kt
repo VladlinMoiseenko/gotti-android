@@ -1,7 +1,8 @@
-package ru.vladlin.gotti_android
+package ru.vladlin.gotti_android.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ru.vladlin.gotti_android.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

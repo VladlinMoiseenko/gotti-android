@@ -32,6 +32,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
@@ -47,6 +53,36 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    
+    def dagger_ver = '2.36'
+    api "com.google.dagger:dagger:$dagger_ver"
+    api "com.google.dagger:dagger-android:$dagger_ver"
+    kapt "com.google.dagger:dagger-compiler:$dagger_ver"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_ver"
+
+    def epoxy_ver = '4.6.3'
+    implementation "com.airbnb.android:epoxy:$epoxy_ver"
+    kapt "com.airbnb.android:epoxy-processor:$epoxy_ver"
+    annotationProcessor "com.airbnb.android:epoxy-processor:$epoxy_ver"
+    implementation "com.airbnb.android:epoxy-paging:$epoxy_ver"
+    implementation "com.airbnb.android:epoxy-paging3:$epoxy_ver"
+    implementation "com.airbnb.android:epoxy-databinding:$epoxy_ver"
+
+    def lifecycle_ver = '2.2.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_ver"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_ver"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_ver"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_ver"
+
+    def modo_ver = '0.6.3'
+    implementation("com.github.terrakok:modo:$modo_ver")
+    implementation("com.github.terrakok:modo-render-android-fm:$modo_ver")
+
+    implementation "com.airbnb.android:lottie:4.1.0"
+
+    api 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
 
 }
