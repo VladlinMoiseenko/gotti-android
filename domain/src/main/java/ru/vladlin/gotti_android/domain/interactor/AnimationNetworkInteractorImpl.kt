@@ -13,5 +13,4 @@ class AnimationNetworkInteractorImpl(val animationRepo: AnimationRepo): Animatio
     override fun getAllNetAnimations(): Flow<Response<AnimationList>> {
         return animationRepo.getAllNetAnimations().flowOn(Dispatchers.IO)
     }
-
 }

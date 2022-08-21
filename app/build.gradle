@@ -58,7 +58,6 @@ dependencies {
     api "com.google.dagger:dagger:$dagger_ver"
     api "com.google.dagger:dagger-android:$dagger_ver"
     kapt "com.google.dagger:dagger-compiler:$dagger_ver"
-    //annotationProcessor "com.google.dagger:dagger-compiler:$dagger_ver"
     kapt "com.google.dagger:dagger-android-processor:$dagger_ver"
 
     def epoxy_ver = '4.6.3'

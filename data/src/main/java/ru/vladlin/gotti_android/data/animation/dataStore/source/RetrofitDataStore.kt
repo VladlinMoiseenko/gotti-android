@@ -15,5 +15,4 @@ class RetrofitDataStore(
     {
         return apiService.getAllAnimations()
     }
-
 }

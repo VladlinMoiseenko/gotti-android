@@ -20,5 +20,4 @@ abstract class BaseDataSource {
     private fun <T> error(message: String): Resource<T> {
         return Resource.error("Network error: $message")
     }
-
 }

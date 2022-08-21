@@ -57,5 +57,4 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         modo.back()
     }
-
 }

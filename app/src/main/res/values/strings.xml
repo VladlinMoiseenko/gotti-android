@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">gotti-android</string>
-
+    <string name="app_name">gotti android</string>
     <string name="no_internet">No internet</string>
-
+    <string name="touch_for_run">Touch for run animation</string>
 </resources>

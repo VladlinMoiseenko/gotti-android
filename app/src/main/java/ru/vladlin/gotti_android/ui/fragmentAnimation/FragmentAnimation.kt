@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import ru.vladlin.gotti_android.databinding.FragmentListBinding
@@ -50,32 +49,24 @@ class FragmentAnimation : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onStart() {
+        super.onStart()
 
         viewModel = injectViewModel(viewModelFactory)
         viewModel.loadData()
 
-        viewModel.dataFeed.observe(viewLifecycleOwner, {
+        viewModel.dataFeed.observe(viewLifecycleOwner) {
             epoxyController.setData(it)
-        })
+        }
 
-        viewModel.isRefreshed.observe(viewLifecycleOwner, {
+        viewModel.isRefreshed.observe(viewLifecycleOwner) {
             binding.swipeRefresh.isRefreshing = it
-        })
+        }
 
-        viewModel.errorSnackbar.observe(viewLifecycleOwner, {
+        viewModel.errorSnackbar.observe(viewLifecycleOwner) {
             Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG)
                 .show()
-        })
-    }
-
-    override fun onStart() {
-        super.onStart()
-    }
-
-    override fun onStop() {
-        super.onStop()
+        }
     }
 
 }

@@ -8,5 +8,4 @@ interface ApiService {
 
     @GET("gotti")
     suspend fun getAllAnimations(): Response<AnimationList>
-
 }

@@ -12,11 +12,9 @@ object Screens {
         override fun create() = FragmentAnimation()
     }
 
-
     fun MultiStack() = MultiAppScreen(
         "MultiStack",
         listOf(Animation()),
         0
     )
-
 }

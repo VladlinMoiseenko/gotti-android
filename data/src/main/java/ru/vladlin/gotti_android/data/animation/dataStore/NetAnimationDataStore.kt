@@ -6,5 +6,4 @@ import ru.vladlin.gotti_android.domain.model.AnimationList
 interface NetAnimationDataStore {
 
     suspend fun getAnimations(): Response<AnimationList>
-
 }

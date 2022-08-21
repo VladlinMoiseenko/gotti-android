@@ -2,6 +2,7 @@ package ru.vladlin.gotti_android.ui.epoxy
 
 import android.content.Context
 import android.content.res.Resources
+import android.util.Log
 import android.view.View
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyHolder
@@ -15,6 +16,9 @@ abstract class CardModel : EpoxyModelWithHolder<CardModel.CardHolder>() {
 
     @field:EpoxyAttribute
     open var title: CharSequence? = null
+
+    @field:EpoxyAttribute
+    open var animationlottie: String? = null
 
     class CardHolder : EpoxyHolder() {
         lateinit var resources: Resources
@@ -31,7 +35,10 @@ abstract class CardModel : EpoxyModelWithHolder<CardModel.CardHolder>() {
 
     override fun bind(holder: CardHolder) {
         holder.binding.apply {
-            materialTextViewTitle.text = title
+            LottieAnimationView.setAnimationFromJson(animationlottie, Integer.toString(animationlottie.hashCode()))
+            LottieAnimationView.setOnClickListener {
+                LottieAnimationView.playAnimation()
+            }
         }
     }
 

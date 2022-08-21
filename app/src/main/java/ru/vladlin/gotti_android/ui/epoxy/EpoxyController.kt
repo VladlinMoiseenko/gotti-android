@@ -20,6 +20,7 @@ class EpoxyController() : TypedEpoxyController<List<AnimationModel>>(
             card {
                 id("card-id:$item.id}")
                 title(item.animationName)
+                animationlottie(item.animationlottie)
             }
         }
     }
