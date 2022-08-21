@@ -11,7 +11,6 @@ import ru.vladlin.gotti_android.ui.fragmentAnimation.FragmentAnimation
 ])
 interface FeedComponent
 {
-
     @Subcomponent.Builder
     interface Builder {
         fun build(): FeedComponent

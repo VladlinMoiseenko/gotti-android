@@ -46,7 +46,7 @@ class RetrofitModule {
     ): Retrofit = Retrofit.Builder()
         .client(okHttpClient)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .baseUrl("http://gottiserv.vladlin.ru:3001/api/gotti") // https://rickandmortyapi.com/api/
+        .baseUrl("http://gottiserv.vladlin.ru:3001/api/")
         .build()
 
     @Provides

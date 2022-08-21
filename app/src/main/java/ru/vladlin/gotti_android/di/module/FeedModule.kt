@@ -11,7 +11,6 @@ import ru.vladlin.gotti_android.domain.boundaries.AnimationNetworkInteractor
 import ru.vladlin.gotti_android.domain.boundaries.AnimationRepo
 import ru.vladlin.gotti_android.domain.interactor.AnimationNetworkInteractorImpl
 
-
 @Module
 class FeedModule
 {
@@ -23,8 +22,11 @@ class FeedModule
 
     @Provides
     @FeedScope
+    fun provideAnimationRepository(netAnimationDataStore: NetAnimationDataStore): AnimationRepo
+            = AnimationRepoImpl(netAnimationDataStore)
+
+    @Provides
+    @FeedScope
     fun provideAnimationNetworkInteractor(animationRepo: AnimationRepo): AnimationNetworkInteractor
             = AnimationNetworkInteractorImpl(animationRepo)
-
-
 }

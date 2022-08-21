@@ -19,6 +19,4 @@ abstract class ViewModelModule
     @IntoMap
     @ViewModelKey(ViewModelAnimation::class)
     abstract fun viewModelAnimation(viewModelAnimation: ViewModelAnimation): ViewModel
-
-
 }

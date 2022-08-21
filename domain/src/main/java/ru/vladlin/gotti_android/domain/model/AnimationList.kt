@@ -3,15 +3,16 @@ package ru.vladlin.gotti_android.domain.model
 
 
 data class AnimationList(
-    val info: Info,
-    val results: List<AnimationModel>
+    val last_page: Int,
+    val limit: Int,
+    val page: Int,
+    val total: Int,
+    val data: List<AnimationModel>
 )
 
-data class Info( //"last_page":1,"limit":10,"page":1,"total":12
-    val total: Int,
-
+//data class Info(
 //    val count: Int,
 //    val next: String?,
 //    val pages: Int,
 //    val prev: String?
-)
+//)

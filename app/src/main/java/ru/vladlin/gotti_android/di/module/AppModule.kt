@@ -11,5 +11,4 @@ class AppModule (val context: Context)
     @Provides
     @AppScope
     fun provideContext(): Context = context
-
 }

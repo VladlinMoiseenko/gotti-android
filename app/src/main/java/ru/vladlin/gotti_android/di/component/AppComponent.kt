@@ -20,10 +20,8 @@ import ru.vladlin.gotti_android.di.module.RetrofitModule
 interface AppComponent
 {
     fun context(): Context
-
     fun apiService(): ApiService
     fun networkInteractor(): NetworkErrorInteractor
     fun inject(app: App)
-
     fun activityComponent(): ActivityComponent.Builder
 }

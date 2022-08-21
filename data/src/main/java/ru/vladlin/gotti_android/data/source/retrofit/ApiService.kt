@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("animation")
+    @GET("gotti")
     suspend fun getAllAnimations(): Response<AnimationList>
 
 }
